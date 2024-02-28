@@ -20,6 +20,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, isLoading, error } = useGenres();
   const skeletons = [1, 2, 3, 4, 5];
 
+  //No Need just for ref
   if (error) return null;
 
   if (isLoading)
@@ -30,7 +31,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
           skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
       </>
     );
-
+  //No Need just for ref
   return (
     <>
       <Heading fontSize="2xl" marginBottom={3}>
